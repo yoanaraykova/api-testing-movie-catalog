@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "23608d30-bf1f-4903-963c-17fd45359fa2",
+		"name": "Movie catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43501127",
+		"_collection_link": "https://yoana-4380560.postman.co/workspace/yoana's-Workspace~05af6a47-c344-4488-8c1e-6c1215bd44f4/collection/43501127-23608d30-bf1f-4903-963c-17fd45359fa2?action=share&source=collection_link&creator=43501127"
+	},
+	"item": [
+		{
+			"name": "New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \"userName\": \"yoanaraykova\", \r\n\r\n  \"firstName\": \"Yoana\", \r\n\r\n  \"lastName\": \"Raykova\", \r\n\r\n  \"email\": \"raykova@gmail.com\", \r\n\r\n  \"password\": \"Nqmaparola123.!\", \r\n\r\n  \"rePassword\": \"Nqmaparola123.!\" \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/User/Register",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"User",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \"email\": \"raykova@gmail.com\", \r\n\r\n  \"password\": \"Nqmaparola123.!\" \r\n\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/User/Authentication",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \"title\": \"Titanic\", \r\n\r\n  \"description\": \"Titanic is a 1997 American epic romantic disaster film directed, written, co-produced and co-edited by James Cameron\", \r\n\r\n  \"posterUrl\": \"https://picfiles.alphacoders.com/140/thumb-1920-140026.jpg\", \r\n\r\n  \"trailerLink\": \"https://www.youtube.com/watch?v=wO44qBPBG4c\", \r\n\r\n  \"isWatched\": true \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/Movie/Create",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Movie 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \"title\": \"Finding Nemo\", \r\n\r\n  \"description\": \"Finding Nemo is a 2003 American animated comedy-drama adventure film produced by Pixar Animation Studios for Walt Disney Pictures.\", \r\n\r\n  \"posterUrl\": \"https://m.media-amazon.com/images/S/pv-target-images/c808b34d3ba16d27609eafe02a50bbdf7d9e5eaff2a003fbb74893938a99ac59.jpg\", \r\n\r\n  \"trailerLink\": \"\", \r\n\r\n  \"isWatched\": true \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/Movie/Create",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/Catalog/All",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"Catalog",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \t\"title\": \"Ice Age\", \r\n\r\n  \t\"description\": \"Ice Age is an American media franchise created by Michael J. Wilson, centering on a group of mammals surviving the Pleistocene ice age\", \r\n\r\n  \t\"posterUrl\": \"https://i.redd.it/66nd0yclo7n61.jpg\", \r\n\r\n  \t\"trailerLink\": \"\", \r\n\r\n  \t\"isWatched\": true \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/Movie/Edit?movieID=c274f621-5a33-4835-a336-08dd71dd43c0",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "movieID",
+							"value": "c274f621-5a33-4835-a336-08dd71dd43c0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/Movie/Delete?movieId=c274f621-5a33-4835-a336-08dd71dd43c0",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "c274f621-5a33-4835-a336-08dd71dd43c0",
+							"description": "c274f621-5a33-4835-a336-08dd71dd43c0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1MjBmMmVjMy01OTNlLTQ5YTItOGI4OS1jMjYzY2M1MDQxOTMiLCJpYXQiOiIwNC8xMi8yMDI1IDA2OjI1OjE4IiwiVXNlcklkIjoiYTAyMDI1NDgtNTUzMi00ZGIwLWY4YmEtMDhkZDZiYWY0ZTQzIiwiRW1haWwiOiJyYXlrb3ZhQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoieW9hbmFyYXlrb3ZhIiwiZXhwIjoxNzQ0NDYwNzE4LCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.NMtY3KrHDUookB1v3ZbiDPGSWeUoZyOqZLzMTuPZDow",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "https://d24hkho2ozf732.cloudfront.net",
+			"type": "string"
+		}
+	]
+}
